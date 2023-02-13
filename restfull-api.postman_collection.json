@@ -1,0 +1,149 @@
+{
+	"info": {
+		"_postman_id": "9f4c443c-780f-45ba-9fa7-a867928881f9",
+		"name": "restfull-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9641663"
+	},
+	"item": [
+		{
+			"name": "get-api",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}",
+					"host": [
+						"{{URL}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"codemonster\",\r\n    \"password\": \"1234567890\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/register",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "userInfo",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/userinfo?username=CodeMonster&password=5678",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"userinfo"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "CodeMonster"
+						},
+						{
+							"key": "password",
+							"value": "5678"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updates",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/updates/mochi/1234",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"updates",
+						"mochi",
+						"1234"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delUser",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/deluser?username=mochi",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"deluser"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "mochi"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
